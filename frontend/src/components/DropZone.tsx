@@ -72,7 +72,7 @@ export default function DropZone({ onExtractedText }: DropZoneProps) {
       />
 
       <p className="text-gray-200 font-mono">
-        Drag & drop a PDF , or click to select
+        Drag & drop a PDF, or click to select
       </p>
 
       {busy && (
