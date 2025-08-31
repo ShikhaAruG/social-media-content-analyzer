@@ -18,13 +18,16 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",  # local dev
-        "https://social-media-content-analyzer.vercel.app"  # deployed frontend
+        "http://localhost:3000",  # for local dev
+        "https://social-media-content-analyzer-kappa.vercel.app",
+        "https://social-media-content-analyzer-git-main-shikhaarugs-projects.vercel.app",
+        "https://social-media-content-analyzer-az2u5x8tr-shikhaarugs-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class AnalyzeReq(BaseModel):
     text: str
