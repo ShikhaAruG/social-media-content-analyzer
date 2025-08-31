@@ -1,6 +1,6 @@
 
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
