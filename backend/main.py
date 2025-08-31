@@ -13,11 +13,7 @@ import textstat
 import re
 from fastapi.middleware.cors import CORSMiddleware
 import pytesseract
-import platform
 
-if platform.system() == "Windows":
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-# On Linux (Render), it will use system-installed "tesseract"
 
 
 app = FastAPI()
