@@ -1,6 +1,6 @@
 
 import pytesseract
-#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
@@ -12,6 +12,13 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import textstat
 import re
 from fastapi.middleware.cors import CORSMiddleware
+import pytesseract
+import platform
+
+if platform.system() == "Windows":
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# On Linux (Render), it will use system-installed "tesseract"
+
 
 app = FastAPI()
 
